@@ -242,12 +242,19 @@ export interface WhenSchemaOptions {
     otherwise?: SchemaLike;
 }
 
+/**
+ *  A function where argument value is the resolved reference value and the return value is the adjusted value to use.
+ */
+export type ReferenceOptionsAdjustFunction = <V extends any>(value: V) => V | any;
+
 export interface ReferenceOptions {
+    adjust?: ReferenceOptionsAdjustFunction;
+    ancestor?: number;
+    iterables?: boolean;
+    map?: [[string, any], [string, any]];
+    prefix?: string;
     separator?: string;
-    contextPrefix?: string;
-    default?: any;
     strict?: boolean;
-    functions?: boolean;
 }
 
 // tslint:disable-next-line:interface-name
