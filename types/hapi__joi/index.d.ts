@@ -245,7 +245,7 @@ export interface WhenSchemaOptions {
 /**
  *  A function where argument value is the resolved reference value and the return value is the adjusted value to use.
  */
-export type ReferenceOptionsAdjustFunction = <V extends any>(value: V) => V | any;
+export type ReferenceOptionsAdjustFunction = (value: any) => any;
 
 export interface ReferenceOptions {
     adjust?: ReferenceOptionsAdjustFunction;

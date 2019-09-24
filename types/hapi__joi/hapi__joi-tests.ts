@@ -156,7 +156,7 @@ whenSchemaOpts = { then: schemaLike, otherwise: schemaLike };
 let refOpts: Joi.ReferenceOptions = {};
 
 refOpts = { separator: str };
-refOpts = { contextPrefix: str };
+refOpts = { prefix: str };
 
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
